@@ -28,7 +28,7 @@ def roll_dice(amount, sides):
 async def on_ready():
     print(f"We have logged in as {bot.user}")
 
-@bot.slash_command(name="r")
+@bot.slash_command(name="r", description="Format: 3w20 oder 3d20")
 async def roll(ctx, input: str):
     try:
         amount, sides = parse_dice_input(input)
