@@ -7,11 +7,12 @@ Simply run the command to build the docker image:
 ```
 docker build github.com/dominik1106/wilbert#main -t repository/name:version
 ```
-Then start it either using :
+Then start it using:
 ```
 docker run -e BOT_TOKEN=$VALUE$ -d repository/name:version
 ```
-You need to set the `BOT_TOKEN` enviroment variable to your discord bot token, either in a `docker-compose.yml` file or by passing the -e flag.
+Or create a `docker-compose.yml`.
+You need to set the `BOT_TOKEN` enviroment variable to your discord bot token, either in the `docker-compose.yml` file or by passing the `-e` flag.
 
 ## Functions
 Provides the following slash commands:
