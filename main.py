@@ -34,19 +34,19 @@ async def roll(ctx, input: str):
         amount, sides = parse_dice_input(input)
         result = roll_dice(amount=amount, sides=sides)
 
-        await ctx.respond(f"{ctx.author.display_name}: `[{input}]` Ergebnis: `[{result}]`")
+        await ctx.respond(f"{ctx.author.display_name}: `[{input}]` -> `[{result}]`")
     except ValueError:
         await ctx.respond("Wrong format!")
 
 @bot.slash_command(name="eigenschaft", description="Rollt 1w20")
 async def eigenschaft(ctx):
     result = roll_dice(1, 20)
-    await ctx.respond(f"{ctx.author.display_name}: Ergebnis: `[{result}]`")
+    await ctx.respond(f"{ctx.author.display_name}: `[3w20]` -> `[{result}]`")
 
 @bot.slash_command(name="talent", description="Rollt 3w20")
 async def talent(ctx):
     result = roll_dice(3, 20)
-    await ctx.respond(f"{ctx.author.display_name}: Ergebnis: `[{result}]`")
+    await ctx.respond(f"{ctx.author.display_name}: `[3w20]` -> `[{result}]`")
 
 @bot.slash_command(name="attacke", description="Rollt 2w20, der zweite bestimmt die Trefferzone")
 async def attacke(ctx):
@@ -72,7 +72,7 @@ async def attacke(ctx):
     else:
         zone = "Kopf"
 
-    await ctx.respond(f"{ctx.author.display_name}: Ergebnis: `[{result}]` Trefferzone: `[{treffer_zone}]` `({zone})`")
+    await ctx.respond(f"{ctx.author.display_name}: AT: `[{result}]` Trefferzone: `[{treffer_zone}]` `({zone})`")
 
 
 bot.run(token)
