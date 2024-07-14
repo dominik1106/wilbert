@@ -1,0 +1,1 @@
+A simple discord bot written using python/pycord for the rollplaying game DSA (The dark Eye).
