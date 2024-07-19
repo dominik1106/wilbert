@@ -1,0 +1,72 @@
+﻿Name;Kategorie;Zusatz;BE Bonus;Kopf;Brust;Rücken;Bauch;LArm;RArm;LBein;RBein;Gewicht;Preis
+Anaurak;Kleidung;0;0;1;1;1;1;1;1;1;1;5;0
+Dicke Kleidung;Kleidung;0;0;0;1;1;1;1;1;1;1;3;0
+Fellumhang;Kleidung;1;0;0;1;2;0;1;1;1;1;3;0
+Lederhose;Kleidung;1;0;0;0;0;1;0;0;1;1;2;0
+Lederweste/Pelzweste;Kleidung;0;0;0;1;1;1;0;0;0;0;2;0
+Hohe Stiefel;Kleidung;1;0;0;0;0;0;0;0;1;1;2;0
+Gambeson;Tuchrüstungen;0;0;0;2;2;2;1;1;1;1;3;40
+Mattenrücken;Tuchrüstungen;0;0;1;1;3;0;0;0;0;0;3,5;65
+Tuchrüstung;Tuchrüstungen;0;0;0;2;2;2;0;0;0;0;2,5;50
+Unterzeug mit Kettenteilen;Tuchrüstungen;0;0;0;2;2;1;2;2;1;1;4;80
+Wattierte Kappe;Tuchrüstungen;1;0;1;0;0;0;0;0;0;0;0,5;5
+Wattiertes Unterzeug;Tuchrüstungen;0;0;0;1;1;1;1;1;1;1;2,5;25
+Armschienen, Leder;Lederrüstungen;1;0;0;0;0;0;1;1;0;0;1;15
+Beinschienen, Leder;Lederrüstungen;1;0;0;0;0;0;0;0;1;1;1;25
+Brustplatte, Leder;Lederrüstungen;0;0;0;2;0;1;0;0;0;0;2;50
+Iryanrüstung;Lederrüstungen;0;1;0;3;2;2;0;0;1;1;3,5;125
+Krötenhaut;Lederrüstungen;0;1;0;3;2;2;1;1;0;0;4;60
+Lederharnirsch;Lederrüstungen;0;0;0;3;3;3;0;0;0;0;4,5;80
+Lederhelm;Lederrüstungen;1;0;2;0;0;0;0;0;0;0;1,5;20
+Lederhelm, verstärkt;Lederrüstungen;1;0;3;0;0;0;0;0;0;0;1,75;30
+Streifenschurz;Lederrüstungen;1;1;0;0;0;2;0;0;2;2;3;40
+Mammutonpanzer;Exotische Materialien;0;1;0;4;4;4;2;2;2;2;6;1200
+Maraskanischer Hartholzharnirsch;Exotische Materialien;0;1;0;4;4;4;1;1;1;1;7;1500
+Brabaker Ringmantel;Kette/Schuppe;0;1;0;3;3;3;2;2;2;2;9;180
+Brigantina;Kette/Schuppe;0;0;0;5;4;4;2;2;0;0;6;350
+Eisenmantel;Kette/Schuppe;0;1;0;5;5;5;2;2;2;2;6;500
+Fünflagenharnisch;Kette/Schuppe;0;0;0;5;5;4;0;0;1;1;7;600
+Kettenbeinlinge, Paar;Kette/Schuppe;1;0;0;0;0;0;0;0;4;4;8;200
+Kettenhandschuhe, Paar;Kette/Schuppe;1;0;0;0;0;0;1;1;0;0;1,5;100
+Kettenhaube;Kette/Schuppe;1;0;3;1;1;0;0;0;0;0;3,5;80
+Kettenhaube mit Gesichtsschutz;Kette/Schuppe;1;0;4;1;1;0;0;0;0;0;4;100
+Kettenhemd, 1/2 Arm;Kette/Schuppe;0;1;0;4;4;4;2;2;1;1;6,5;150
+Kettenhemd, lang;Kette/Schuppe;0;1;0;4;4;4;3;3;2;2;10;180
+Kettenmantel;Kette/Schuppe;0;1;0;4;4;4;3;3;3;3;12;500
+Kettenkragen;Kette/Schuppe;1;1;2;1;1;0;0;0;0;0;2,5;60
+Kettenweste;Kette/Schuppe;0;1;0;4;4;4;0;0;0;0;5;100
+Löwenmähne;Kette/Schuppe;1;1;2;2;2;0;1;1;0;0;5;100
+Ringelpanzer;Kette/Schuppe;0;1;0;4;4;4;3;3;1;1;7;550
+Schuppenpanzer;Kette/Schuppe;0;0;0;5;5;5;3;3;3;3;12;1000
+Schuppenpanzer, lang;Kette/Schuppe;0;0;0;5;5;5;3;3;4;4;18;1200
+Spiegelpanzer;Kette/Schuppe;0;1;0;5;5;5;3;3;2;2;10;1000
+Amazonenrüstung;Plattenrüstungen;0;2;3;5;3;5;2;2;3;3;8;9999
+Armschienen, Bronze;Plattenrüstungen;1;0;0;0;0;0;2;2;0;0;1,5;25
+Armschienen, Stahl;Plattenrüstungen;1;0;0;0;0;0;3;3;0;0;1,5;35
+Barburiner Hut;Plattenrüstungen;1;1;4;0;1;0;0;0;0;0;3;60
+Bart/Halsberge;Plattenrüstungen;1;0;2;1;1;0;0;0;0;0;1;45
+Beinschienen, Bronze;Plattenrüstungen;1;0;0;0;0;0;0;0;2;2;3;35
+Beinschienen, Stahl;Plattenrüstungen;1;0;0;0;0;0;0;0;3;3;3;50
+Beintaschen/Schürze;Plattenrüstungen;1;0;0;0;0;2;0;0;2;2;2;90
+Bronzeharnirsch;Plattenrüstungen;0;0;0;5;4;4;0;0;0;0;6;250
+Brustplatte, Stahl;Plattenrüstungen;0;0;0;2;0;0;0;0;0;0;2;50
+Brustschalen;Plattenrüstungen;1;0;0;2;0;0;0;0;0;0;0,5;25
+Drachenhelm;Plattenrüstungen;1;0;3;0;1;0;0;0;0;0;3;80
+Garether Platte;Plattenrüstungen;0;0;0;6;5;6;5;5;4;4;14;750
+Gestechrüstung;Plattenrüstungen;0;0;8;8;7;8;7;7;7;7;30;2500
+Gladiatorenschulter;Plattenrüstungen;0;1;0;3;2;0;3;0;0;0;4;180
+Horas. Reiterharnirsch;Plattenrüstungen;0;2;3;7;5;7;5;5;5;5;17;1000
+Kürass;Plattenrüstungen;0;1;0;5;1;2;0;0;0;0;4;110
+Kusliker Lamellar;Plattenrüstungen;0;0;0;5;4;5;0;0;2;2;7,5;500
+Leichte Platte;Plattenrüstungen;0;1;0;5;4;5;0;0;2;2;7,5;250
+Morion;Plattenrüstungen;1;1;3;0;0;0;0;0;0;0;4;75
+Panzerbein;Plattenrüstungen;1;0;0;0;0;0;0;0;4;4;6;150
+Panzerhandschuhe, Paar;Plattenrüstungen;1;0;0;0;0;0;2;2;0;0;1,5;120
+Panzerschuh;Plattenrüstungen;1;0;0;0;0;0;0;0;1;1;1;120
+Plattenschultern;Plattenrüstungen;1;0;0;0;0;0;2;2;0;0;3;150
+Plattenarme;Plattenrüstungen;1;0;0;0;0;0;5;5;0;0;3;200
+Schaller;Plattenrüstungen;1;1;4;0;0;0;0;0;0;0;4;60
+Stechhelm/Visierhelm;Plattenrüstungen;1;0;5;0;0;0;0;0;0;0;4;100
+Sturmhaube;Plattenrüstungen;1;1;3;0;0;0;0;0;0;0;3,5;70
+Tellerhelm;Plattenrüstungen;1;0;2;0;0;0;0;0;0;0;1,5;30
+Topfhelm;Plattenrüstungen;1;0;5;0;0;0;0;0;0;0;4,5;80

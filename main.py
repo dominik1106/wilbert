@@ -1,22 +1,11 @@
 import os, re, random, csv
 import discord
 from table2ascii import table2ascii, PresetStyle
+from ruestungen import *
 
 token = os.environ["BOT_TOKEN"]
 
 bot = discord.Bot()
-
-
-import csv
-
-with open("Ruestungs_Zonen.csv", "r", encoding="utf-8-sig") as csv_file:
-    csv_reader = csv.DictReader(csv_file, delimiter=";")
-
-    ruestungen_header = csv_reader.fieldnames
-    ruestungen = list(csv_reader)
-
-ruestungen_namen: str = [item["Name"] for item in ruestungen]
-
 
 def parse_dice_input(dice_input):
     pattern = r'(\d+)[dw](\d+)'
@@ -85,15 +74,22 @@ async def attacke(ctx):
 
     await ctx.respond(f"{ctx.author.display_name}: AT: `[{result}]` Trefferzone: `[{treffer_zone}]` `({zone})`")
 
+
+
 async def get_ruestungen(ctx: discord.AutocompleteContext):
-    return 
+    kategorie = ctx.options["kategorie"]
+    
+    if kategorie != None:
+        rust = filter_nach_kategorie(kategorie)
+        rust = extract_column(rust, "Name")
+        return [item for item in rust if item.lower().startswith(ctx.value.lower())]
+    else:
+        return [item for item in ruestungen_namen if item.lower().startswith(ctx.value.lower())]
 
 @bot.slash_command(name="ruestungen", description="Lasst euch die Zonen-RS einer Rüstung anzeigen")
-@discord.option("rüstung", choices=ruestungen_namen, required=False, description="Die Rüstung nach der ihr suchen wollt")
-async def ruestung(
-        ctx: discord.ApplicationContext,
-        rüstung: str
-):
+@discord.option("rüstung", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_ruestungen, required=False)
+@discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=ruestungen_kategorien, required=False,)
+async def ruestung(ctx: discord.ApplicationContext, rüstung: str, kategorie: str):
     if rüstung == None:
         stats = [item.values() for item in ruestungen]
     else:
