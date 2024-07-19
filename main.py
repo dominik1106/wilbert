@@ -88,8 +88,8 @@ async def attacke(ctx):
 async def get_ruestungen(ctx: discord.AutocompleteContext):
     return 
 
-@bot.slash_command(name="ruestungen")
-@discord.option("rüstung", choices=ruestungen_namen, required=False)
+@bot.slash_command(name="ruestungen", description="Lasst euch die Zonen-RS einer Rüstung anzeigen")
+@discord.option("rüstung", choices=ruestungen_namen, required=False, description="Die Rüstung nach der ihr suchen wollt")
 async def ruestung(
         ctx: discord.ApplicationContext,
         rüstung: str
