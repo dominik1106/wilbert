@@ -1,11 +1,22 @@
-import os
+import os, re, random, csv
 import discord
-import re
-import random
+from table2ascii import table2ascii, PresetStyle
 
 token = os.environ["BOT_TOKEN"]
 
 bot = discord.Bot()
+
+
+import csv
+
+with open("Ruestungs_Zonen.csv", "r", encoding="utf-8-sig") as csv_file:
+    csv_reader = csv.DictReader(csv_file, delimiter=";")
+
+    ruestungen_header = csv_reader.fieldnames
+    ruestungen = list(csv_reader)
+
+ruestungen_namen: str = [item["Name"] for item in ruestungen]
+
 
 def parse_dice_input(dice_input):
     pattern = r'(\d+)[dw](\d+)'
@@ -73,6 +84,29 @@ async def attacke(ctx):
         zone = "Kopf"
 
     await ctx.respond(f"{ctx.author.display_name}: AT: `[{result}]` Trefferzone: `[{treffer_zone}]` `({zone})`")
+
+async def get_ruestungen(ctx: discord.AutocompleteContext):
+    return 
+
+@bot.slash_command(name="ruestungen")
+@discord.option("rüstung", choices=ruestungen_namen, required=False)
+async def ruestung(
+        ctx: discord.ApplicationContext,
+        rüstung: str
+):
+    if rüstung == None:
+        stats = [item.values() for item in ruestungen]
+    else:
+        stats = [next(item for item in ruestungen if item["Name"] == rüstung).values()]
+
+    table = table2ascii(
+            header= ruestungen_header,
+            body= stats,
+            first_col_heading=True,
+            style= PresetStyle.thin_box
+    )
+
+    await ctx.respond(f"```\n{table}\n```")
 
 
 bot.run(token)
