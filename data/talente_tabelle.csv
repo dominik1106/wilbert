@@ -1,0 +1,59 @@
+﻿Name;Kategorie;Eigenschaft 1;Eigenschaft 2;Eigenschaft 3;eBe;Typ;Vorraussetzungen
+Akrobatik;Körperliche Talente;MU;GE;KK;BEx2;Spezial;Körperberherrschung 4
+Athletik;Körperliche Talente;GE;KO;KK;BEx2;Basis;
+Fliegen;Körperliche Talente;MU;IN;GE;BE;Spezial;
+Gaukeleien;Körperliche Talente;MU;CH;FF;BEx2;Spezial;
+Klettern;Körperliche Talente;MU;GE;KK;BEx2;Basis;
+Körperberherrschung;Körperliche Talente;MU;IN;GE;BEx2;Basis;
+Reiten;Körperliche Talente;CH;GE;KK;BE-2;Spezial;
+Schleichen;Körperliche Talente;MU;IN;GE;BE;Basis;
+Schwimmen;Körperliche Talente;GE;KO;KK;BEx2;Basis;
+Selbstbeherrschung;Körperliche Talente;MU;KO;KK;;Basis;
+Sich Verstecken;Körperliche Talente;MU;IN;GE;BE-2;Basis;
+Singen;Körperliche Talente;IN;CH;CH;BE-3;Basis;
+Sinnesschärfe;Körperliche Talente;KL;IN;IN;;Basis;
+Skifahren;Körperliche Talente;GE;GE;KO;BE-2;Spezial;
+Stimmen Imitieren;Körperliche Talente;KL;IN;CH;BE-4;Spezial;Sinnesschärfe 4
+Tanzen;Körperliche Talente;CH;GE;GE;BEx2;Basis;
+Taschendiebstahl;Körperliche Talente;MU;IN;FF;BEx2;Spezial;10+: Menschenkenntnis 4
+Zechen;Körperliche Talente;IN;KO;KK;;Basis;Menschenkenntnis 4
+Betören;Gesellschaftliche Talente;IN;CH;CH;(BE-2);Spezial;
+Etikette;Gesellschaftliche Talente;KL;IN;CH;(BE-2);Spezial;
+Gassenwissen;Gesellschaftliche Talente;KL;IN;CH;(BE-4);Spezial;10+: Menschenkenntnis 4
+Lehren;Gesellschaftliche Talente;KL;IN;CH;;Spezial;
+Menschenkenntnis;Gesellschaftliche Talente;KL;IN;CH;;Basis;
+Schauspielerei;Gesellschaftliche Talente;MU;KL;CH;spez.;Spezial;10+: Sich Verkleiden, Singen, Überreden, Überzeugen je 4
+Schriftlicher Ausdruck;Gesellschaftliche Talente;KL;IN;IN;;Spezial;L/S (passende Schrift) 6
+Sich Verkleiden;Gesellschaftliche Talente;MU;CH;GE;spez.;Spezial;
+Überreden;Gesellschaftliche Talente;MU;IN;CH;;Basis;10+: Menschenkenntnis 4
+Überzeugen;Gesellschaftliche Talente;KL;IN;CH;;Spezial;Menschenkenntnis 4
+Fährtensuchen;Natur-Talente;KL;IN;IN;;Basis;10+: Menschenkenntnis 4
+Fallenstellen;Natur-Talente;KL;FF;KK;;Spezial;10+: Wildnisleben 4
+Fesseln/Entfesseln;Natur-Talente;FF;GE;KK;spez.;Spezial;
+Fischen/Angeln;Natur-Talente;IN;FF;KK;spez.;Spezial;
+Orientierung;Natur-Talente;KL;IN;IN;;Basis;
+Wettervorhersage;Natur-Talente;KL;IN;IN;;Spezial;
+Wildnisleben;Natur-Talente;IN;GE;KO;;Basis;
+Anatomie;Wissenstalente;MU;KL;FF;;Spezial;keine Totenangst
+Baukunst;Wissenstalente;KL;KL;FF;;Spezial;L/S 4, M/Z 5, Rechnen 5
+Brett-/Kartenspiel;Wissenstalente;KL;KL;IN;;Spezial;
+Geographie;Wissenstalente;KL;Kl;IN;;Spezial;
+Geschichtswissen;Wissenstalente;KL;KL;IN;;Spezial;10+: Lesen/Schreiben 4
+Gesteinskunde;Wissenstalente;KL;KL;FF;;Spezial;
+Götter/Kulte;Wissenstalente;KL;KL;IN;;Basis;
+Heraldik;Wissenstalente;KL;KL;FF;;Spezial;
+Hüttenkunde;Wissenstalente;KL;IN;KO;;Spezial;
+Kriegskunst;Wissenstalente;MU;KL;CH;;Spezial;
+Kryptographie;Wissenstalente;KL;KL;IN;;Spezial;L/S und Rechnen je 6, Sprachenkunde 4, M/Z 4
+Magiekunde;Wissenstalente;KL;KL;IN;;Spezial;10+: L/S 6
+Mechanik;Wissenstalente;KL;KL;FF;;Spezial;10+: L/S, M/Z, Rechnen je 6
+Pflanzenkunde;Wissenstalente;KL;IN;FF;;Spezial;
+Philosophie;Wissenstalente;KL;KL;IN;;Spezial;
+Rechnen;Wissenstalente;KL;KL;IN;;Basis;
+Rechtskunde;Wissenstalente;KL;KL;IN;;Spezial;
+Sagen/Legenden;Wissenstalente;KL;IN;CH;;Basis;
+Schätzen;Wissenstalente;KL;IN;IN;;Spezial;
+Sprachenkunde;Wissenstalente;KL;KL;IN;;Spezial;
+Staatskunst;Wissenstalente;KL;IN;CH;;Spezial;
+Sternkunde;Wissenstalente;KL;KL;IN;;Spezial;10+: L/S, Rechnen, Sinnesschärfe je 6
+Tierkunde;Wissenstalente;MU;KL;IN;;Spezial;

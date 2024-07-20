@@ -1,13 +1,15 @@
 import os, re, random, csv
 import discord
 from table2ascii import table2ascii, PresetStyle
-import waffen_util, ruestungen_util
 from ruestungen_util import *
 from waffen_util import *
+from talente_util import *
 
 token = os.environ["BOT_TOKEN"]
 
 bot = discord.Bot()
+
+info = bot.create_group("info", "Info's übers Spiel")
 
 def parse_dice_input(dice_input):
     pattern = r'(\d+)[dw](\d+)'
@@ -41,17 +43,17 @@ async def roll(ctx, input: str):
         await ctx.respond("Wrong format!")
 
 @bot.slash_command(name="eigenschaft", description="Rollt 1w20")
-async def eigenschaft(ctx):
+async def eigenschaft_roll(ctx):
     result = roll_dice(1, 20)
     await ctx.respond(f"{ctx.author.display_name}: `[3w20]` -> `[{result}]`")
 
 @bot.slash_command(name="talent", description="Rollt 3w20")
-async def talent(ctx):
+async def talent_roll(ctx):
     result = roll_dice(3, 20)
     await ctx.respond(f"{ctx.author.display_name}: `[3w20]` -> `[{result}]`")
 
 @bot.slash_command(name="attacke", description="Rollt 2w20, der zweite bestimmt die Trefferzone")
-async def attacke(ctx):
+async def attacke_roll(ctx):
     result = roll_dice(1, 20)
 
     treffer_zone = int(roll_dice(1, 20))
@@ -91,7 +93,7 @@ async def get_ruestungen(ctx: discord.AutocompleteContext):
     # else:
     #     return [item for item in ruestungen_namen if item.lower().startswith(ctx.value.lower())]
 
-@bot.slash_command(name="ruestungen", description="Lasst euch die Zonen-RS einer Rüstung anzeigen")
+@info.command(name="ruestungen", description="Lasst euch die Zonen-RS einer Rüstung anzeigen")
 @discord.option("rüstung", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_ruestungen)
 # @discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=ruestungen_kategorien, required=False)
 async def ruestung(ctx: discord.ApplicationContext, rüstung: str):
@@ -118,7 +120,7 @@ async def get_waffen(ctx: discord.AutocompleteContext):
     # else:
     #     return [item for item in waffen_namen if item.lower().startswith(ctx.value.lower())]
 
-@bot.slash_command(name="waffen", description="Lasst euch die Infos einer Waffe anzeigen")
+@info.command(name="waffen", description="Lasst euch die Infos einer Waffe anzeigen")
 @discord.option("waffe", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_waffen)
 # @discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=waffen_kategorien, required=False,)
 async def waffe(ctx: discord.ApplicationContext, waffe: str):
@@ -144,5 +146,24 @@ async def waffe(ctx: discord.ApplicationContext, waffe: str):
     )
 
     await ctx.respond(f"```\n{table}\n```")
+
+async def get_talente(ctx: discord.AutocompleteContext):
+    return [item for item in talente_namen if item.lower().startswith(ctx.value.lower())]
+
+@info.command(name="talente", description="Sucht nach Talenten")
+@discord.option("talent", description="Das Talent nach dem ihr suchen wollt", autocomplete=get_talente)
+async def talente(ctx: discord.ApplicationContext, talent: str):
+    stats = [next(item for item in talente if item["Name"] == talent).values()]
+
+    table = table2ascii(
+            header= talente_header,
+            body= stats,
+            first_col_heading=True,
+            style= PresetStyle.thin_box
+    )
+
+    await ctx.respond(f"```\n{table}\n```")
+
+
 
 bot.run(token)
