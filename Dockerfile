@@ -6,4 +6,6 @@ COPY . /
 
 RUN python -m pip install -r requirements.txt
 
+WORKDIR /src
+
 CMD ["python", "./main.py"]
