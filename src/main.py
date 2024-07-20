@@ -107,7 +107,7 @@ async def ruestung(ctx: discord.ApplicationContext, rüstung: str):
     await ctx.respond(f"```\n{table}\n```")
 
 async def get_waffen(ctx: discord.AutocompleteContext):
-    return [item for item in waffen_namen if item.lower().startswith(ctx.value.lower())]
+    return ["{Name} ({Kategorie})".format(**item) for item in waffen if item["Name"].lower().startswith(ctx.value.lower())]
 
     # kategorie = ctx.options["kategorie"]
     
@@ -121,8 +121,20 @@ async def get_waffen(ctx: discord.AutocompleteContext):
 @bot.slash_command(name="waffen", description="Lasst euch die Infos einer Waffe anzeigen")
 @discord.option("waffe", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_waffen)
 # @discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=waffen_kategorien, required=False,)
-async def ruestung(ctx: discord.ApplicationContext, waffe: str):
-    stats = [next(item for item in waffen if item["Name"] == waffe).values()]
+async def waffe(ctx: discord.ApplicationContext, waffe: str):
+
+    pattern = r'(\w+) \((\w+)\)'
+
+    match = re.match(pattern, waffe)
+
+    if match:
+        # Extract the amount and sides from the match groups
+        name = match.group(1)
+        typ = match.group(2)
+    else:
+        raise ValueError("Input does not match the expected format")
+
+    stats = [next(item for item in waffen if (item["Name"] == name and item["Kategorie"] == typ)).values()]
 
     table = table2ascii(
             header= waffen_header,
