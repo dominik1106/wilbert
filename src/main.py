@@ -2,6 +2,7 @@ import os, re, random, csv
 import discord
 from table2ascii import table2ascii, PresetStyle
 from ruestungen import *
+from waffen import *
 
 token = os.environ["BOT_TOKEN"]
 
@@ -104,5 +105,33 @@ async def ruestung(ctx: discord.ApplicationContext, rüstung: str, kategorie: st
 
     await ctx.respond(f"```\n{table}\n```")
 
+async def get_waffen(ctx: discord.AutocompleteContext):
+    kategorie = ctx.options["kategorie"]
+    
+    if kategorie != None:
+        rust = filter_nach_kategorie(kategorie)
+        rust = extract_column(rust, "Name")
+        return [item for item in rust if item.lower().startswith(ctx.value.lower())]
+    else:
+        return [item for item in waffen_namen if item.lower().startswith(ctx.value.lower())]
+
+@bot.slash_command(name="waffen", description="Lasst euch die Infos einer Waffe anzeigen")
+@discord.option("waffe", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_waffen, required=False)
+@discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=waffen_kategorien, required=False,)
+async def ruestung(ctx: discord.ApplicationContext, waffe: str, kategorie: str):
+    if waffe == None:
+        await ctx.respond("Gibt zu viele Waffen")
+        # stats = [item.values() for item in waffen]
+    else:
+        stats = [next(item for item in waffen if item["Name"] == waffe).values()]
+
+    table = table2ascii(
+            header= waffen_header,
+            body= stats,
+            first_col_heading=True,
+            style= PresetStyle.thin_box
+    )
+
+    await ctx.respond(f"```\n{table}\n```")
 
 bot.run(token)
