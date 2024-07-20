@@ -1,0 +1,159 @@
+﻿Name;Kategorie;TP;INI;WM AT;WM PA;Preis
+Anderthalbhänder;Anderthalbhänder;1W6+5;1;0;0;250
+Bastardschwert;Anderthalbhänder;1W6+5;0;0;-1;200
+Nachtwind;Anderthalbhänder;1W6+4;2;0;0;500
+Rondrakamm;Anderthalbhänder;2W6+2;0;0;0;9999
+Tuzakmesser;Anderthalbhänder;1W6+6;1;0;0;400
+Basiliskenzunge;Dolche;1W6+2;-1;0;-1;70
+Borndorn;Dolche;1W6+2;0;0;-1;40
+Dolch;Dolche;1W6+1;0;0;-1;20
+Drachenzahn;Dolche;1W6+2;0;0;0;120
+Eberfänger;Dolche;1W6+2;0;0;-1;60
+Hakendolch;Dolche;1W6+1;0;0;1;90
+Jagdmesser;Dolche;1W6+2;-1;0;-2;50
+Kurzschwert;Dolche;1W6+2;0;0;-1;80
+Langdolch;Dolche;1W6+2;0;0;0;45
+Linkhand;Dolche;1W6+1;0;0;1;90
+Mengbilar;Dolche;1W6+1;-2;0;-3;200
+Messer;Dolche;1W6;-2;-2;-3;10
+Ogerfänger;Dolche;1W6+2;0;0;-2;150
+Scheibendolch;Dolche;1W6+2;0;0;-3;60
+Schwerer Dolch;Dolche;1W6+2;0;0;-1;40
+Vulkanglasdolch;Dolche;1W6+1;-2;-2;-3;9999
+Waqqif;Dolche;1W6+2;-2;-1;-3;60
+Wurfdolch;Dolche;1W6+1;-1;-1;-2;30
+Wurfmesser;Dolche;1W6-1;-1;-2;-3;15
+Degen;Fechtwaffen;1W6+3;2;0;-1;150
+Florett;Fechtwaffen;1W6+3;3;1;-1;180
+Lagdolch;Fechtwaffen;1W6+2;0;0;0;45
+Magierdegen;Fechtwaffen;1W6+2;1;0;-2;150
+Panzerstecher;Fechtwaffen;1W6+4;0;-1;-1;120
+Rapier;Fechtwaffen;1W6+3;1;0;0;120
+Robbenöter;Fechtwaffen;1W6+3;0;0;0;200
+Stockdegen;Fechtwaffen;1W6+3;0;-1;-3;180
+Wolfsmesser;Fechtwaffen;1W6+3;1;0;0;250
+Baccanaq / Bakka;Hiebwaffen;1W6+4;-1;0;-2;180
+Beil;Hiebwaffen;1W6+3;-1;-1;-2;20
+Brabakbengel;Hiebwaffen;1W6+5;0;0;-1;100
+Byakka;Hiebwaffen;1W6+5;-1;0;-2;90
+Fackel;Hiebwaffen;1W6;-2;-2;-3;0,5
+Fleischerbeil;Hiebwaffen;1W6+2;-1;-2;-3;20
+Haumesser;Hiebwaffen;1W6+3;-1;0;-2;40
+Keule;Hiebwaffen;1W6+2;0;0;-2;15
+Knochenkeule;Hiebwaffen;1W6+3;0;0;-1;9999
+Knüppel;Hiebwaffen;1W6+1;0;0;-2;1
+Kriegsfächer;Hiebwaffen;1W6+2;0;0;1;250
+Lindwurmschläger;Hiebwaffen;1W6+4;-1;0;-1;120
+Molokdeschnaja;Hiebwaffen;1W6+4;0;0;0;90
+Orknase;Hiebwaffen;1W6+5;-1;0;-1;75
+Rabenschnabel;Hiebwaffen;1W6+4;0;0;0;130
+Schmiedehammer;Hiebwaffen;1W6+4;-1;-1;-1;9999
+Sichel;Hiebwaffen;1W6+2;-2;-2;-2;25
+Skraja;Hiebwaffen;1W6+3;0;0;0;50
+Sonnenszepter;Hiebwaffen;1W6+3;0;-1;-1;9999
+Streitaxt;Hiebwaffen;1W6+4;0;0;-1;50
+Streitkolben;Hiebwaffen;1W6+4;0;0;-1;50
+Stuhlbein;Hiebwaffen;1W6;-1;-1;-1;0
+Wurfbeil;Hiebwaffen;1W6+3;-1;0;-2;35
+Wurfkeule;Hiebwaffen;1W6+2;-1;-1;-1;18
+Zwergenskraja;Hiebwaffen;1W6+3;0;0;0;100
+Glefe;Infanteriewaffen;1W6+4;-1;0;-2;45
+Hakenspieß;Infanteriewaffen;1W6+3;0;-1;-1;70
+Hellebarde;Infanteriewaffen;1W6+5;0;0;-1;75
+Korspieß;Infanteriewaffen;2W6+2;0;0;-1;200
+Neethaner Langaxt;Infanteriewaffen;2W6+2;-2;-1;-3;160
+Pailos;Infanteriewaffen;2W6+4;-2;-1;-3;300
+Partisane;Infanteriewaffen;1W6+5;0;0;-2;80
+Schnitter;Infanteriewaffen;1W6+5;0;0;0;120
+Sense;Infanteriewaffen;1W6+3;-2;-2;-4;30
+Sturmsense;Infanteriewaffen;1W6+4;-1;-1;-2;40
+Warunker Hammer;Infanteriewaffen;1W6+6;-1;0;-1;150
+Wurmspieß;Infanteriewaffen;1W6+5;0;0;-2;120
+Dreigliederstab;Kettenstäbe;1W6+2;2;1;1;180
+Kettenstab;Kettenstäbe;1W6+2;2;1;0;120
+Geißel;Kettenwaffen;1W6-1;-1;0;-4;15
+Kettenkugel;Kettenwaffen;3W6;-3;-2;-4;150
+Morgenstern;Kettenwaffen;1W6+5;-1;-1;-2;100
+Neunschwänzige;Kettenwaffen;1W6+1;-1;-1;-4;60
+Ochsenherde;Kettenwaffen;3W6+3;-3;-2;-4;250
+Ogerschelle;Kettenwaffen;2W6+2;-2;-1;-3;180
+Peitsche;Peitsche;1W6;0;0;0;25
+Amazonensäbel;Säbel;1W6+4;1;0;0;180
+Arbach;Säbel;1W6+4;0;0;-1;120
+Entermesser;Säbel;1W6+3;0;0;0;50
+Haumesser;Säbel;1W6+3;-1;0;-2;40
+Khunchomer;Säbel;1W6+4;0;0;0;130
+Kurzschwert;Säbel;1W6+2;0;0;-1;80
+Kusliker Säbel;Säbel;1W6+3;1;0;0;160
+Robbentöter;Säbel;1W6+3;0;0;0;200
+Säbel;Säbel;1W6+3;1;0;0;100
+Sklaventod;Säbel;1W6+4;0;0;0;250
+Waqqif;Säbel;1W6+2;-2;-1;-3;60
+Wolfsmesser;Säbel;1W6+3;1;0;0;250
+Amazonensäbel;Schwerter;1W6+4;1;0;0;180
+Arbach;Schwerter;1W6+4;0;0;-1;120
+Barbarenschwert;Schwerter;1W6+5;-1;0;-1;200
+Bastardschwert;Schwerter;1W6+5;-1;0;-1;200
+Breitschwert;Schwerter;1W6+4;0;0;-1;120
+Kurzschwert;Schwerter;1W6+2;0;0;-1;80
+Kusliker Säbel;Schwerter;1W6+3;1;0;0;160
+Nachtwind;Schwerter;1W6+4;2;0;0;500
+Rapier;Schwerter;1W6+3;1;0;0;120
+Robbentöter;Schwerter;1W6+3;0;0;0;200
+Säbel;Schwerter;1W6+3;1;0;0;100
+Schwert;Schwerter;1W6+4;0;0;0;180
+Turnierschwert;Schwerter;1W6+3 (A);0;0;0;80
+Wolfsmesser;Schwerter;1W6+3;1;0;0;250
+Drachentöter;Speere;3W6+5;-3;-2;-4;9999
+Dreizack;Speere;1W6+4;0;0;-1;50
+Dschadra;Speere;1W6+5;-1;0;-3;120
+Efferdbart;Speere;1W6+4;0;0;-1;80
+Holzspeer;Speere;1W6+3;0;-1;-3;10
+Jadgspieß;Speere;1W6+6;-1;0;-1;80
+Korspieß;Speere;2W6+2;0;0;-1;200
+Kriegslanze;Speere;1W6+3;-2;-2;-4;120
+Partisane;Speere;1W6+5;0;0;-2;80
+Pike;Speere;1W6+5;-2;-1;-2;50
+Schnitter;Speere;1W6+5;0;0;0;120
+Speer;Speere;1W6+5;-1;0;-2;30
+Stoßspeer;Speere;2W6+2;-1;0;-1;100
+Turnierlanze;Speere;1W6+2 (A);-2;-2;-4;50
+Wurfspeer;Speere;1W6+3;-2;-1;-3;30
+Wurmspieß;Speere;1W6+5;0;0;-2;120
+Kampfstab;Stäbe;1W6+1;1;0;0;40
+Magierstab;Stäbe;1W6+1;0;-1;-1;9999
+Zweililien;Stäbe;1W6+3;1;1;-1;200
+Dreschflegel;Zweihandflegel;1W6+3;-2;-2;-3;15
+Kriegsflegel;Zweihandflegel;1W6+6;-1;-1;-2;50
+Barbarenstreitaxt;Zweihand-Hiebwaffen;3W6+2;-2;-1;-4;150
+Echsische Axt;Zweihand-Hiebwaffen;1W6+5;0;0;-1;9999
+Felsspalter;Zweihand-Hiebwaffen;2W6+2;-1;0;-2;300
+Gruufhai;Zweihand-Hiebwaffen;1W6+6;-2;-1;-3;120
+Holzfälleraxt;Zweihand-Hiebwaffen;2W6;-2;-1;-4;80
+Kriegshammer;Zweihand-Hiebwaffen;2W6+3;-2;-1;-3;120
+Neethaner Langaxt;Zweihand-Hiebwaffen;2W6+2;-2;-1;-3;160
+Orknase;Zweihand-Hiebwaffen;1W6+5;-1;0;-1;75
+Pailos;Zweihand-Hiebwaffen;2W6+4;-2;-1;-3;300
+Schnitter;Zweihand-Hiebwaffen;1W6+5;0;0;0;120
+Spitzhacke;Zweihand-Hiebwaffen;1W6+6;-3;-2;-4;20
+Vorschlaghammer;Zweihand-Hiebwaffen;1W6+5;-3;-2;-4;30
+Warunker Hammer;Zweihand-Hiebwaffen;1W6+6;-1;0;-1;150
+Zwergenschlägel;Zweihand-Hiebwaffen;1W6+5;-1;0;-1;150
+Andergaster;Zweihandschwerter/-säbel;3W6+2;-3;0;-2;350
+Anderthalbhänder;Zweihandschwerter/-säbel;1W6+5;1;0;0;250
+Boronssichel;Zweihandschwerter/-säbel;2W6+6;-2;0;-3;400
+Doppelkhunchomer;Zweihandschwerter/-säbel;1W6+6;-1;0;-1;250
+Großer Sklaventod;Zweihandschwerter/-säbel;2W6+4;-2;0;-2;350
+Richtschwert;Zweihandschwerter/-säbel;3W6+4;-3;-2;-4;9999
+Rondrakamm;Zweihandschwerter/-säbel;2W6+2;0;0;0;9999
+Tuzakmesser;Zweihandschwerter/-säbel;1W6+6;1;0;0;400
+Zweihänder;Zweihandschwerter/-säbel;2W6+4;-1;0;-1;250
+Fausthieb;Handgemenge-Waffen;1W6 (A);-2;-1;-2;0
+Tritt/Kopfstoß;Handgemenge-Waffen;1W6 (A);-1;-1;-2;0
+Drachenklaue;Handgemenge-Waffen;1W6+2;-1;0;0;350
+Veteranenhand;Handgemenge-Waffen;1W6+2;-1;0;-1;250
+Schlagring;Handgemenge-Waffen;1W6+2 (A);0;-1;-2;25
+Orchidee;Handgemenge-Waffen;1W6+1;0;-1;-2;180
+Panzerarm;Handgemenge-Waffen;1W6+2;-1;0;0;140
+Bock;Handgemenge-Waffen;1W6+2;-1;0;0;80
+Stoß mit Schild;Handgemenge-Waffen;1W6+1 (A);0;0;0;0

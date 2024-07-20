@@ -21,7 +21,7 @@ def filter_nach_kategorie(kategorie: str):
     return [ruestung for ruestung in ruestungen if ruestung["Kategorie"] == kategorie]
 
 
-with open("ruestungs_tabelle.csv", "r", encoding="utf-8-sig") as csv_file:
+with open("./data/ruestungs_tabelle.csv", "r", encoding="utf-8-sig") as csv_file:
     csv_reader = csv.DictReader(csv_file, delimiter=";")
 
     ruestungen_header = csv_reader.fieldnames
