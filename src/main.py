@@ -91,14 +91,14 @@ async def get_ruestungen(ctx: discord.AutocompleteContext):
 @discord.option("rüstung", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_ruestungen)
 async def info_ruestungen(ctx: discord.ApplicationContext, rüstung: str):
     try:
-        stats = [ruestungen.display_namen[rüstung].values()]
+        stats = ruestungen.display_namen[rüstung].values()
     except KeyError:
         await ctx.respond("**Rüstung nicht gefunden!**")
         return
 
     table = table2ascii(
             header= ruestungen.header,
-            body= stats,
+            body= [stats],
             first_col_heading=True,
             style= PresetStyle.thin_box
     )
@@ -112,14 +112,14 @@ async def get_waffen(ctx: discord.AutocompleteContext):
 @discord.option("waffe", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_waffen)
 async def info_waffen(ctx: discord.ApplicationContext, waffe: str):
     try:
-        stats = [waffen.display_namen[waffe].values()]
+        stats = waffen.display_namen[waffe].values()
     except KeyError:
         await ctx.respond("**Waffe nicht gefunden!**")
         return
 
     table = table2ascii(
             header= waffen.header,
-            body= stats,
+            body= [stats],
             style= PresetStyle.thin_box
     )
 
@@ -132,20 +132,46 @@ async def get_talente(ctx: discord.AutocompleteContext):
 @discord.option("talent", description="Das Talent nach dem ihr suchen wollt", autocomplete=get_talente)
 async def info_talente(ctx: discord.ApplicationContext, talent: str):
     try:
-        stats = [talente.display_namen[talent].values()]
+        stats = talente.display_namen[talent].values()
     except KeyError:
         await ctx.respond("**Talent nicht gefunden!**")
         return
 
     table = table2ascii(
             header= talente.header,
-            body= stats,
+            body= [stats],
             first_col_heading=True,
             style= PresetStyle.thin_box
     )
 
     await ctx.respond(f"```\n{table}\n```")
 
+
+@info.command(name="wunden", description="Zeigt die Effekte der Wunden nach Zone an")
+@discord.option("zone", description="Das Körperteil welches getroffen wurde", choices=["Kopf", "Brust", "Arme", "Bauch", "Beine"], required=False)
+async def info_wunden(ctx: discord.ApplicationContext, zone: str):
+    header = ["Zone", "Erste/Zweite Wunde", "Dritte Wunde"]
+    wunden = {
+        "Kopf": ["Kopf", "MU,KL,IN,INI-Basis je -2; INI -2W6", "+2W6 SP, bewusstlos, Blutverlust"],
+        "Brust": ["Brust", "AT,PA,KO,KK je -1; +1W6 SP", "bewusstlos, Blutverlust"],
+        "Arme": ["Arme", "AT,PA,KK,FF je -2 mit diesem Arm", "Arm handlungsunfähig"],
+        "Bauch": ["Bauch", "AT,PA,KO,KK,GS,INI-Basis je -1; +1W6 SP", "bewusstlos, Blutverlust"],
+        "Beine": ["Beine", "AT,PA,GE,INI-Basis je -2; GS -1", "Sturz, kampfunfähig"]
+    }
+
+    if(zone == None):
+        body = wunden.values()
+    else:
+        body = [wunden[zone]]
+        
+    table = table2ascii(
+        header= header,
+        body= body,
+        first_col_heading=True,
+        style= PresetStyle.thin_box
+    )
+
+    await ctx.respond(f"```\n{table}\n```")
 
 
 bot.run(token)
