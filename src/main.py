@@ -1,15 +1,19 @@
 import os, re, random, csv
 import discord
 from table2ascii import table2ascii, PresetStyle
-from ruestungen_util import *
-from waffen_util import *
-from talente_util import *
+
+from info import Info, WaffenInfo
 
 token = os.environ["BOT_TOKEN"]
 
 bot = discord.Bot()
 
 info = bot.create_group("info", "Info's übers Spiel")
+
+ruestungen = Info("ruestungs_tabelle.csv")
+talente = Info("talente_tabelle.csv")
+waffen = WaffenInfo("waffen_tabelle.csv")
+
 
 def parse_dice_input(dice_input):
     pattern = r'(\d+)[dw](\d+)'
@@ -81,26 +85,19 @@ async def attacke_roll(ctx):
 
 
 async def get_ruestungen(ctx: discord.AutocompleteContext):
-    return [item for item in ruestungen_namen if item.lower().startswith(ctx.value.lower())]
-
-    # kategorie = ctx.options["kategorie"]
-    
-    # if kategorie != None:
-    #     print(kategorie)
-    #     rust = ruestungen_util.filter_nach_kategorie(kategorie)
-    #     rust = extract_column(rust, "Name")
-    #     return [item for item in rust if item.lower().startswith(ctx.value.lower())]
-    # else:
-    #     return [item for item in ruestungen_namen if item.lower().startswith(ctx.value.lower())]
+    return [item for item in ruestungen.display_namen.keys() if item.lower().startswith(ctx.value.lower())]
 
 @info.command(name="ruestungen", description="Lasst euch die Zonen-RS einer Rüstung anzeigen")
 @discord.option("rüstung", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_ruestungen)
-# @discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=ruestungen_kategorien, required=False)
-async def ruestung(ctx: discord.ApplicationContext, rüstung: str):
-    stats = [next(item for item in ruestungen if item["Name"] == rüstung).values()]
+async def info_ruestungen(ctx: discord.ApplicationContext, rüstung: str):
+    try:
+        stats = [ruestungen.display_namen[rüstung].values()]
+    except KeyError:
+        await ctx.respond("**Rüstung nicht gefunden!**")
+        return
 
     table = table2ascii(
-            header= ruestungen_header,
+            header= ruestungen.header,
             body= stats,
             first_col_heading=True,
             style= PresetStyle.thin_box
@@ -109,54 +106,39 @@ async def ruestung(ctx: discord.ApplicationContext, rüstung: str):
     await ctx.respond(f"```\n{table}\n```")
 
 async def get_waffen(ctx: discord.AutocompleteContext):
-    return ["{Name} ({Kategorie})".format(**item) for item in waffen if item["Name"].lower().startswith(ctx.value.lower())]
-
-    # kategorie = ctx.options["kategorie"]
-    
-    # if kategorie != None:
-    #     rust = waffen_util.filter_nach_kategorie(kategorie)
-    #     rust = extract_column(rust, "Name")
-    #     return [item for item in rust if item.lower().startswith(ctx.value.lower())]
-    # else:
-    #     return [item for item in waffen_namen if item.lower().startswith(ctx.value.lower())]
+    return [item for item in waffen.display_namen.keys() if item.lower().startswith(ctx.value.lower())]
 
 @info.command(name="waffen", description="Lasst euch die Infos einer Waffe anzeigen")
 @discord.option("waffe", description="Die Rüstung nach der ihr suchen wollt", autocomplete=get_waffen)
-# @discord.option("kategorie", description="Kategorie der Rüstung nach der ihr suchen wollt", choices=waffen_kategorien, required=False,)
-async def waffe(ctx: discord.ApplicationContext, waffe: str):
-
-    pattern = r'(\w+) \((\w+)\)'
-
-    match = re.match(pattern, waffe)
-
-    if match:
-        # Extract the amount and sides from the match groups
-        name = match.group(1)
-        typ = match.group(2)
-    else:
-        raise ValueError("Input does not match the expected format")
-
-    stats = [next(item for item in waffen if (item["Name"] == name and item["Kategorie"] == typ)).values()]
+async def info_waffen(ctx: discord.ApplicationContext, waffe: str):
+    try:
+        stats = [waffen.display_namen[waffe].values()]
+    except KeyError:
+        await ctx.respond("**Waffe nicht gefunden!**")
+        return
 
     table = table2ascii(
-            header= waffen_header,
+            header= waffen.header,
             body= stats,
-            first_col_heading=True,
             style= PresetStyle.thin_box
     )
 
     await ctx.respond(f"```\n{table}\n```")
 
 async def get_talente(ctx: discord.AutocompleteContext):
-    return [item for item in talente_namen if item.lower().startswith(ctx.value.lower())]
+    return [item for item in talente.display_namen.keys() if item.lower().startswith(ctx.value.lower())]
 
 @info.command(name="talente", description="Sucht nach Talenten")
 @discord.option("talent", description="Das Talent nach dem ihr suchen wollt", autocomplete=get_talente)
-async def talente(ctx: discord.ApplicationContext, talent: str):
-    stats = [next(item for item in talente if item["Name"] == talent).values()]
+async def info_talente(ctx: discord.ApplicationContext, talent: str):
+    try:
+        stats = [talente.display_namen[talent].values()]
+    except KeyError:
+        await ctx.respond("**Talent nicht gefunden!**")
+        return
 
     table = table2ascii(
-            header= talente_header,
+            header= talente.header,
             body= stats,
             first_col_heading=True,
             style= PresetStyle.thin_box
